@@ -13,6 +13,15 @@
 		DBCBA95F2BBFEDB1006B40CA /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DBCBA95E2BBFEDB1006B40CA /* Base */; };
 		DBCBA9612BBFEDB2006B40CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBCBA9602BBFEDB2006B40CA /* Assets.xcassets */; };
 		DBCBA9642BBFEDB2006B40CA /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DBCBA9632BBFEDB2006B40CA /* Base */; };
+		DBCBA9752BBFEE4B006B40CA /* iTunesSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9742BBFEE4B006B40CA /* iTunesSearchRouter.swift */; };
+		DBCBA9772BBFEE69006B40CA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DBCBA9762BBFEE69006B40CA /* .gitignore */; };
+		DBCBA97A2BBFEEDA006B40CA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DBCBA9792BBFEEDA006B40CA /* SnapKit */; };
+		DBCBA97D2BBFEEEB006B40CA /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = DBCBA97C2BBFEEEB006B40CA /* Then */; };
+		DBCBA9802BBFEF2D006B40CA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = DBCBA97F2BBFEF2D006B40CA /* Realm */; };
+		DBCBA9822BBFEF2D006B40CA /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DBCBA9812BBFEF2D006B40CA /* RealmSwift */; };
+		DBCBA9852BBFEF42006B40CA /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DBCBA9842BBFEF42006B40CA /* RxCocoa */; };
+		DBCBA9872BBFEF42006B40CA /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DBCBA9862BBFEF42006B40CA /* RxSwift */; };
+		DBCBA98A2BBFF176006B40CA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DBCBA9892BBFF176006B40CA /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,8 @@
 		DBCBA9602BBFEDB2006B40CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBCBA9632BBFEDB2006B40CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBCBA9652BBFEDB2006B40CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBCBA9742BBFEE4B006B40CA /* iTunesSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchRouter.swift; sourceTree = "<group>"; };
+		DBCBA9762BBFEE69006B40CA /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +42,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBCBA9872BBFEF42006B40CA /* RxSwift in Frameworks */,
+				DBCBA98A2BBFF176006B40CA /* Alamofire in Frameworks */,
+				DBCBA9822BBFEF2D006B40CA /* RealmSwift in Frameworks */,
+				DBCBA9802BBFEF2D006B40CA /* Realm in Frameworks */,
+				DBCBA9852BBFEF42006B40CA /* RxCocoa in Frameworks */,
+				DBCBA97A2BBFEEDA006B40CA /* SnapKit in Frameworks */,
+				DBCBA97D2BBFEEEB006B40CA /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +58,7 @@
 		DBCBA94B2BBFEDB1006B40CA = {
 			isa = PBXGroup;
 			children = (
+				DBCBA9762BBFEE69006B40CA /* .gitignore */,
 				DBCBA9562BBFEDB1006B40CA /* iTunesSearch */,
 				DBCBA9552BBFEDB1006B40CA /* Products */,
 			);
@@ -56,6 +75,8 @@
 		DBCBA9562BBFEDB1006B40CA /* iTunesSearch */ = {
 			isa = PBXGroup;
 			children = (
+				DBCBA96B2BBFEDDD006B40CA /* Presentation */,
+				DBCBA96E2BBFEDFC006B40CA /* Utility */,
 				DBCBA9572BBFEDB1006B40CA /* AppDelegate.swift */,
 				DBCBA9592BBFEDB1006B40CA /* SceneDelegate.swift */,
 				DBCBA95B2BBFEDB1006B40CA /* ViewController.swift */,
@@ -65,6 +86,61 @@
 				DBCBA9652BBFEDB2006B40CA /* Info.plist */,
 			);
 			path = iTunesSearch;
+			sourceTree = "<group>";
+		};
+		DBCBA96B2BBFEDDD006B40CA /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBA9712BBFEE11006B40CA /* Model */,
+				DBCBA9702BBFEE0A006B40CA /* ViewModel */,
+				DBCBA96F2BBFEE06006B40CA /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DBCBA96E2BBFEDFC006B40CA /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBA9732BBFEE21006B40CA /* RealmManager */,
+				DBCBA9722BBFEE17006B40CA /* NetworkManager */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		DBCBA96F2BBFEE06006B40CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DBCBA9702BBFEE0A006B40CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DBCBA9712BBFEE11006B40CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DBCBA9722BBFEE17006B40CA /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBA9742BBFEE4B006B40CA /* iTunesSearchRouter.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		DBCBA9732BBFEE21006B40CA /* RealmManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RealmManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +159,15 @@
 			dependencies = (
 			);
 			name = iTunesSearch;
+			packageProductDependencies = (
+				DBCBA9792BBFEEDA006B40CA /* SnapKit */,
+				DBCBA97C2BBFEEEB006B40CA /* Then */,
+				DBCBA97F2BBFEF2D006B40CA /* Realm */,
+				DBCBA9812BBFEF2D006B40CA /* RealmSwift */,
+				DBCBA9842BBFEF42006B40CA /* RxCocoa */,
+				DBCBA9862BBFEF42006B40CA /* RxSwift */,
+				DBCBA9892BBFF176006B40CA /* Alamofire */,
+			);
 			productName = iTunesSearch;
 			productReference = DBCBA9542BBFEDB1006B40CA /* iTunesSearch.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +196,13 @@
 				Base,
 			);
 			mainGroup = DBCBA94B2BBFEDB1006B40CA;
+			packageReferences = (
+				DBCBA9782BBFEEDA006B40CA /* XCRemoteSwiftPackageReference "SnapKit" */,
+				DBCBA97B2BBFEEEB006B40CA /* XCRemoteSwiftPackageReference "Then" */,
+				DBCBA97E2BBFEF2D006B40CA /* XCRemoteSwiftPackageReference "realm-swift" */,
+				DBCBA9832BBFEF42006B40CA /* XCRemoteSwiftPackageReference "RxSwift" */,
+				DBCBA9882BBFF176006B40CA /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = DBCBA9552BBFEDB1006B40CA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBCBA9772BBFEE69006B40CA /* .gitignore in Resources */,
 				DBCBA9612BBFEDB2006B40CA /* Assets.xcassets in Resources */,
 				DBCBA9642BBFEDB2006B40CA /* Base in Resources */,
 				DBCBA95F2BBFEDB1006B40CA /* Base in Resources */,
@@ -138,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBCBA9752BBFEE4B006B40CA /* iTunesSearchRouter.swift in Sources */,
 				DBCBA95C2BBFEDB1006B40CA /* ViewController.swift in Sources */,
 				DBCBA9582BBFEDB1006B40CA /* AppDelegate.swift in Sources */,
 				DBCBA95A2BBFEDB1006B40CA /* SceneDelegate.swift in Sources */,
@@ -307,9 +401,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jinoo.iTunesSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -335,9 +433,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jinoo.iTunesSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -363,6 +465,87 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DBCBA9782BBFEEDA006B40CA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		DBCBA97B2BBFEEEB006B40CA /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		DBCBA97E2BBFEF2D006B40CA /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.45.0;
+			};
+		};
+		DBCBA9832BBFEF42006B40CA /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+		DBCBA9882BBFF176006B40CA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DBCBA9792BBFEEDA006B40CA /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBCBA9782BBFEEDA006B40CA /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		DBCBA97C2BBFEEEB006B40CA /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBCBA97B2BBFEEEB006B40CA /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		DBCBA97F2BBFEF2D006B40CA /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBCBA97E2BBFEF2D006B40CA /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		DBCBA9812BBFEF2D006B40CA /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBCBA97E2BBFEF2D006B40CA /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		DBCBA9842BBFEF42006B40CA /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBCBA9832BBFEF42006B40CA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		DBCBA9862BBFEF42006B40CA /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBCBA9832BBFEF42006B40CA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		DBCBA9892BBFF176006B40CA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBCBA9882BBFF176006B40CA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DBCBA94C2BBFEDB1006B40CA /* Project object */;
 }
