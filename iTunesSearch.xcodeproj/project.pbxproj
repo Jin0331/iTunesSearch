@@ -10,7 +10,6 @@
 		DBCBA9582BBFEDB1006B40CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9572BBFEDB1006B40CA /* AppDelegate.swift */; };
 		DBCBA95A2BBFEDB1006B40CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9592BBFEDB1006B40CA /* SceneDelegate.swift */; };
 		DBCBA95C2BBFEDB1006B40CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA95B2BBFEDB1006B40CA /* ViewController.swift */; };
-		DBCBA95F2BBFEDB1006B40CA /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DBCBA95E2BBFEDB1006B40CA /* Base */; };
 		DBCBA9612BBFEDB2006B40CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBCBA9602BBFEDB2006B40CA /* Assets.xcassets */; };
 		DBCBA9642BBFEDB2006B40CA /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DBCBA9632BBFEDB2006B40CA /* Base */; };
 		DBCBA9752BBFEE4B006B40CA /* iTunesSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9742BBFEE4B006B40CA /* iTunesSearchRouter.swift */; };
@@ -22,6 +21,8 @@
 		DBCBA9852BBFEF42006B40CA /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DBCBA9842BBFEF42006B40CA /* RxCocoa */; };
 		DBCBA9872BBFEF42006B40CA /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DBCBA9862BBFEF42006B40CA /* RxSwift */; };
 		DBCBA98A2BBFF176006B40CA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DBCBA9892BBFF176006B40CA /* Alamofire */; };
+		DBCBA98C2BC000A0006B40CA /* iTunesSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA98B2BC000A0006B40CA /* iTunesSearchManager.swift */; };
+		DBCBA98E2BC0016B006B40CA /* iTunesSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA98D2BC0016B006B40CA /* iTunesSearchModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,12 +30,13 @@
 		DBCBA9572BBFEDB1006B40CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBCBA9592BBFEDB1006B40CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DBCBA95B2BBFEDB1006B40CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DBCBA95E2BBFEDB1006B40CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBCBA9602BBFEDB2006B40CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBCBA9632BBFEDB2006B40CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBCBA9652BBFEDB2006B40CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBCBA9742BBFEE4B006B40CA /* iTunesSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchRouter.swift; sourceTree = "<group>"; };
 		DBCBA9762BBFEE69006B40CA /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		DBCBA98B2BC000A0006B40CA /* iTunesSearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchManager.swift; sourceTree = "<group>"; };
+		DBCBA98D2BC0016B006B40CA /* iTunesSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +82,6 @@
 				DBCBA9572BBFEDB1006B40CA /* AppDelegate.swift */,
 				DBCBA9592BBFEDB1006B40CA /* SceneDelegate.swift */,
 				DBCBA95B2BBFEDB1006B40CA /* ViewController.swift */,
-				DBCBA95D2BBFEDB1006B40CA /* Main.storyboard */,
 				DBCBA9602BBFEDB2006B40CA /* Assets.xcassets */,
 				DBCBA9622BBFEDB2006B40CA /* LaunchScreen.storyboard */,
 				DBCBA9652BBFEDB2006B40CA /* Info.plist */,
@@ -124,6 +125,7 @@
 		DBCBA9712BBFEE11006B40CA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DBCBA98D2BC0016B006B40CA /* iTunesSearchModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				DBCBA9742BBFEE4B006B40CA /* iTunesSearchRouter.swift */,
+				DBCBA98B2BC000A0006B40CA /* iTunesSearchManager.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -220,7 +223,6 @@
 				DBCBA9772BBFEE69006B40CA /* .gitignore in Resources */,
 				DBCBA9612BBFEDB2006B40CA /* Assets.xcassets in Resources */,
 				DBCBA9642BBFEDB2006B40CA /* Base in Resources */,
-				DBCBA95F2BBFEDB1006B40CA /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,23 +234,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBCBA9752BBFEE4B006B40CA /* iTunesSearchRouter.swift in Sources */,
+				DBCBA98E2BC0016B006B40CA /* iTunesSearchModel.swift in Sources */,
 				DBCBA95C2BBFEDB1006B40CA /* ViewController.swift in Sources */,
 				DBCBA9582BBFEDB1006B40CA /* AppDelegate.swift in Sources */,
 				DBCBA95A2BBFEDB1006B40CA /* SceneDelegate.swift in Sources */,
+				DBCBA98C2BC000A0006B40CA /* iTunesSearchManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DBCBA95D2BBFEDB1006B40CA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DBCBA95E2BBFEDB1006B40CA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DBCBA9622BBFEDB2006B40CA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -391,7 +387,7 @@
 				INFOPLIST_FILE = iTunesSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -423,7 +419,7 @@
 				INFOPLIST_FILE = iTunesSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
