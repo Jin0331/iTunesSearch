@@ -23,6 +23,7 @@
 		DBCBA98A2BBFF176006B40CA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DBCBA9892BBFF176006B40CA /* Alamofire */; };
 		DBCBA98C2BC000A0006B40CA /* iTunesSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA98B2BC000A0006B40CA /* iTunesSearchManager.swift */; };
 		DBCBA98E2BC0016B006B40CA /* iTunesSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA98D2BC0016B006B40CA /* iTunesSearchModel.swift */; };
+		DBCBA9912BC00D09006B40CA /* Formatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9902BC00D09006B40CA /* Formatter+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		DBCBA9762BBFEE69006B40CA /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DBCBA98B2BC000A0006B40CA /* iTunesSearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchManager.swift; sourceTree = "<group>"; };
 		DBCBA98D2BC0016B006B40CA /* iTunesSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchModel.swift; sourceTree = "<group>"; };
+		DBCBA9902BC00D09006B40CA /* Formatter+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Formatter+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		DBCBA96E2BBFEDFC006B40CA /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				DBCBA98F2BC00CFD006B40CA /* Extension */,
 				DBCBA9732BBFEE21006B40CA /* RealmManager */,
 				DBCBA9722BBFEE17006B40CA /* NetworkManager */,
 			);
@@ -144,6 +147,14 @@
 			children = (
 			);
 			path = RealmManager;
+			sourceTree = "<group>";
+		};
+		DBCBA98F2BC00CFD006B40CA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBA9902BC00D09006B40CA /* Formatter+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +248,7 @@
 				DBCBA98E2BC0016B006B40CA /* iTunesSearchModel.swift in Sources */,
 				DBCBA95C2BBFEDB1006B40CA /* ViewController.swift in Sources */,
 				DBCBA9582BBFEDB1006B40CA /* AppDelegate.swift in Sources */,
+				DBCBA9912BC00D09006B40CA /* Formatter+Extension.swift in Sources */,
 				DBCBA95A2BBFEDB1006B40CA /* SceneDelegate.swift in Sources */,
 				DBCBA98C2BC000A0006B40CA /* iTunesSearchManager.swift in Sources */,
 			);

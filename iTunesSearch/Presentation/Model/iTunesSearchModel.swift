@@ -23,7 +23,7 @@ struct iTunesSearch : Decodable {
     let description: String
     let trackID: Int
     let trackName: String
-    let releaseDate, currentVersionReleaseDate: Date
+    let releaseDate, currentVersionReleaseDate: String
     let averageUserRatingForCurrentVersion: Double
     let trackContentRating, version, wrapperType: String
 
@@ -36,4 +36,7 @@ struct iTunesSearch : Decodable {
         case trackID = "trackId"
         case trackName, releaseDate, currentVersionReleaseDate, averageUserRatingForCurrentVersion, trackContentRating, version, wrapperType
     }
+    
+    //TODO: - releaseDate, currentVersionReleaseDate -> StringToDate로 변경 필요
+    
 }
