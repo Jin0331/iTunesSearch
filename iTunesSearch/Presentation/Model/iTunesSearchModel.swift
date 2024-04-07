@@ -12,6 +12,7 @@ struct iTunesSearchList: Decodable {
 }
 
 struct iTunesSearch : Decodable {
+    let bundleId : String
     let artworkUrl60, artworkUrl100: String
     let screenshotUrls: [String]
     let minimumOSVersion: String
@@ -28,7 +29,7 @@ struct iTunesSearch : Decodable {
     let trackContentRating, version, wrapperType: String
 
     enum CodingKeys: String, CodingKey {
-        case artworkUrl60, artworkUrl100, screenshotUrls
+        case bundleId, artworkUrl60, artworkUrl100, screenshotUrls
         case minimumOSVersion = "minimumOsVersion"
         case averageUserRating, trackCensoredName, sellerName, releaseNotes
         case artistID = "artistId"

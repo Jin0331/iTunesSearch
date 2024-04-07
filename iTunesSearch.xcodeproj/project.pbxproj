@@ -24,6 +24,14 @@
 		DBCBA98C2BC000A0006B40CA /* iTunesSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA98B2BC000A0006B40CA /* iTunesSearchManager.swift */; };
 		DBCBA98E2BC0016B006B40CA /* iTunesSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA98D2BC0016B006B40CA /* iTunesSearchModel.swift */; };
 		DBCBA9912BC00D09006B40CA /* Formatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9902BC00D09006B40CA /* Formatter+Extension.swift */; };
+		DBCBA9932BC02079006B40CA /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9922BC02079006B40CA /* RealmModel.swift */; };
+		DBCBA9952BC25E0C006B40CA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9942BC25E0C006B40CA /* SearchViewController.swift */; };
+		DBCBA99C2BC25E90006B40CA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9982BC25E90006B40CA /* BaseViewController.swift */; };
+		DBCBA99E2BC26347006B40CA /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA99D2BC26347006B40CA /* MovieCollectionViewCell.swift */; };
+		DBCBA9A02BC26368006B40CA /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA99F2BC26368006B40CA /* SearchTableViewCell.swift */; };
+		DBCBA9A32BC26432006B40CA /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9A22BC26432006B40CA /* SearchViewModel.swift */; };
+		DBCBA9A52BC2645C006B40CA /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9A42BC2645C006B40CA /* Protocol.swift */; };
+		DBCBA9A82BC27549006B40CA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DBCBA9A72BC27549006B40CA /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +47,13 @@
 		DBCBA98B2BC000A0006B40CA /* iTunesSearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchManager.swift; sourceTree = "<group>"; };
 		DBCBA98D2BC0016B006B40CA /* iTunesSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchModel.swift; sourceTree = "<group>"; };
 		DBCBA9902BC00D09006B40CA /* Formatter+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Formatter+Extension.swift"; sourceTree = "<group>"; };
+		DBCBA9922BC02079006B40CA /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		DBCBA9942BC25E0C006B40CA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DBCBA9982BC25E90006B40CA /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		DBCBA99D2BC26347006B40CA /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		DBCBA99F2BC26368006B40CA /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		DBCBA9A22BC26432006B40CA /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		DBCBA9A42BC2645C006B40CA /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +65,7 @@
 				DBCBA98A2BBFF176006B40CA /* Alamofire in Frameworks */,
 				DBCBA9822BBFEF2D006B40CA /* RealmSwift in Frameworks */,
 				DBCBA9802BBFEF2D006B40CA /* Realm in Frameworks */,
+				DBCBA9A82BC27549006B40CA /* Kingfisher in Frameworks */,
 				DBCBA9852BBFEF42006B40CA /* RxCocoa in Frameworks */,
 				DBCBA97A2BBFEEDA006B40CA /* SnapKit in Frameworks */,
 				DBCBA97D2BBFEEEB006B40CA /* Then in Frameworks */,
@@ -94,6 +110,7 @@
 		DBCBA96B2BBFEDDD006B40CA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DBCBA9992BC25E90006B40CA /* Base */,
 				DBCBA9712BBFEE11006B40CA /* Model */,
 				DBCBA9702BBFEE0A006B40CA /* ViewModel */,
 				DBCBA96F2BBFEE06006B40CA /* View */,
@@ -107,6 +124,7 @@
 				DBCBA98F2BC00CFD006B40CA /* Extension */,
 				DBCBA9732BBFEE21006B40CA /* RealmManager */,
 				DBCBA9722BBFEE17006B40CA /* NetworkManager */,
+				DBCBA9A42BC2645C006B40CA /* Protocol.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -114,6 +132,8 @@
 		DBCBA96F2BBFEE06006B40CA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DBCBA9A12BC2636E006B40CA /* Cell */,
+				DBCBA9942BC25E0C006B40CA /* SearchViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -121,6 +141,7 @@
 		DBCBA9702BBFEE0A006B40CA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DBCBA9A22BC26432006B40CA /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -128,6 +149,7 @@
 		DBCBA9712BBFEE11006B40CA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DBCBA9922BC02079006B40CA /* RealmModel.swift */,
 				DBCBA98D2BC0016B006B40CA /* iTunesSearchModel.swift */,
 			);
 			path = Model;
@@ -157,6 +179,23 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		DBCBA9992BC25E90006B40CA /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBA9982BC25E90006B40CA /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		DBCBA9A12BC2636E006B40CA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBA99F2BC26368006B40CA /* SearchTableViewCell.swift */,
+				DBCBA99D2BC26347006B40CA /* MovieCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,6 +220,7 @@
 				DBCBA9842BBFEF42006B40CA /* RxCocoa */,
 				DBCBA9862BBFEF42006B40CA /* RxSwift */,
 				DBCBA9892BBFF176006B40CA /* Alamofire */,
+				DBCBA9A72BC27549006B40CA /* Kingfisher */,
 			);
 			productName = iTunesSearch;
 			productReference = DBCBA9542BBFEDB1006B40CA /* iTunesSearch.app */;
@@ -216,6 +256,7 @@
 				DBCBA97E2BBFEF2D006B40CA /* XCRemoteSwiftPackageReference "realm-swift" */,
 				DBCBA9832BBFEF42006B40CA /* XCRemoteSwiftPackageReference "RxSwift" */,
 				DBCBA9882BBFF176006B40CA /* XCRemoteSwiftPackageReference "Alamofire" */,
+				DBCBA9A62BC27549006B40CA /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = DBCBA9552BBFEDB1006B40CA /* Products */;
 			projectDirPath = "";
@@ -247,8 +288,15 @@
 				DBCBA9752BBFEE4B006B40CA /* iTunesSearchRouter.swift in Sources */,
 				DBCBA98E2BC0016B006B40CA /* iTunesSearchModel.swift in Sources */,
 				DBCBA95C2BBFEDB1006B40CA /* ViewController.swift in Sources */,
+				DBCBA9A52BC2645C006B40CA /* Protocol.swift in Sources */,
+				DBCBA9952BC25E0C006B40CA /* SearchViewController.swift in Sources */,
 				DBCBA9582BBFEDB1006B40CA /* AppDelegate.swift in Sources */,
+				DBCBA9A32BC26432006B40CA /* SearchViewModel.swift in Sources */,
+				DBCBA99C2BC25E90006B40CA /* BaseViewController.swift in Sources */,
+				DBCBA9932BC02079006B40CA /* RealmModel.swift in Sources */,
 				DBCBA9912BC00D09006B40CA /* Formatter+Extension.swift in Sources */,
+				DBCBA99E2BC26347006B40CA /* MovieCollectionViewCell.swift in Sources */,
+				DBCBA9A02BC26368006B40CA /* SearchTableViewCell.swift in Sources */,
 				DBCBA95A2BBFEDB1006B40CA /* SceneDelegate.swift in Sources */,
 				DBCBA98C2BC000A0006B40CA /* iTunesSearchManager.swift in Sources */,
 			);
@@ -515,6 +563,14 @@
 				minimumVersion = 5.9.1;
 			};
 		};
+		DBCBA9A62BC27549006B40CA /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -552,6 +608,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DBCBA9882BBFF176006B40CA /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		DBCBA9A72BC27549006B40CA /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBCBA9A62BC27549006B40CA /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
