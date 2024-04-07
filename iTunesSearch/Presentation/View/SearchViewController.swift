@@ -15,12 +15,15 @@ class SearchViewController: BaseViewController {
 
     let tableView = UITableView().then {
         $0.register(SearchTableViewCell.self, forCellReuseIdentifier: SearchTableViewCell.identifier)
-        $0.rowHeight = 150
+        $0.rowHeight = 340
     }
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout()).then {
         $0.register(MovieCollectionViewCell.self, forCellWithReuseIdentifier: MovieCollectionViewCell.identifier)
     }
-    let searchBar = UISearchBar()
+    let searchBar = UISearchBar().then {
+        $0.placeholder = "게임, 앱, 스토리 등"
+        $0.backgroundImage = UIImage()
+    }
     
     let viewModel = SearchViewModel()
     let disposeBag = DisposeBag()
@@ -58,8 +61,13 @@ class SearchViewController: BaseViewController {
     
     override func configureLayout() {
         
+        searchBar.snp.makeConstraints { make in
+            make.top.horizontalEdges.equalTo(view.safeAreaLayoutGuide)
+            make.height.equalTo(50)
+        }
+        
         tableView.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(50)
+            make.top.equalTo(searchBar.snp.bottom).offset(10)
             make.horizontalEdges.equalToSuperview()
             make.bottom.equalToSuperview()
         }
@@ -74,7 +82,7 @@ class SearchViewController: BaseViewController {
     override func configureNavigation() {
         super.configureNavigation()
         navigationItem.title = "검색"
-        navigationItem.titleView = searchBar
+//        navigationItem.titleView = searchBar
     }
 }
 
