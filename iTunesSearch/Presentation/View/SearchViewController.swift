@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 
 class SearchViewController: BaseViewController {
-
+    
     let tableView = UITableView().then {
         $0.register(SearchTableViewCell.self, forCellReuseIdentifier: SearchTableViewCell.identifier)
         $0.rowHeight = 340
@@ -36,21 +36,30 @@ class SearchViewController: BaseViewController {
     
     func bind() {
         
-        let recentText = PublishSubject<String>()
-        let input = SearchViewModel.Input(searchButtonTap: searchBar.rx.searchButtonClicked, searchText: searchBar.rx.text.orEmpty)
+        //        let recentText = PublishSubject<String>()
+        let input = SearchViewModel.Input(searchButtonTap: searchBar.rx.searchButtonClicked,
+                                          searchText: searchBar.rx.text.orEmpty,
+                                          tableViewTap: tableView.rx.itemSelected
+        )
         let output = viewModel.transform(input: input)
+        
         
         output.search
             .bind(
                 to: tableView.rx.items(
                     cellIdentifier: SearchTableViewCell.identifier,
                     cellType: SearchTableViewCell.self)) { (row, element, cell) in
-                        
                         cell.updateUI(data: element)
-                        
                     }
                     .disposed(by: disposeBag)
         
+        output.seletedItem
+            .withUnretained(self)
+            .bind(onNext: { owner, value in
+                let vc = SearchDetailViewController()
+                owner.navigationController?.pushViewController(vc, animated: true)
+            })
+            .disposed(by: disposeBag)
     }
     
     override func configureHierarchy() {
@@ -82,7 +91,7 @@ class SearchViewController: BaseViewController {
     override func configureNavigation() {
         super.configureNavigation()
         navigationItem.title = "검색"
-//        navigationItem.titleView = searchBar
+        //        navigationItem.titleView = searchBar
     }
 }
 

@@ -32,6 +32,7 @@
 		DBCBA9A32BC26432006B40CA /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9A22BC26432006B40CA /* SearchViewModel.swift */; };
 		DBCBA9A52BC2645C006B40CA /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9A42BC2645C006B40CA /* Protocol.swift */; };
 		DBCBA9A82BC27549006B40CA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DBCBA9A72BC27549006B40CA /* Kingfisher */; };
+		DBCBA9AA2BC2899D006B40CA /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9A92BC2899D006B40CA /* SearchDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		DBCBA99F2BC26368006B40CA /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		DBCBA9A22BC26432006B40CA /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		DBCBA9A42BC2645C006B40CA /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		DBCBA9A92BC2899D006B40CA /* SearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			children = (
 				DBCBA9A12BC2636E006B40CA /* Cell */,
 				DBCBA9942BC25E0C006B40CA /* SearchViewController.swift */,
+				DBCBA9A92BC2899D006B40CA /* SearchDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBCBA9752BBFEE4B006B40CA /* iTunesSearchRouter.swift in Sources */,
+				DBCBA9AA2BC2899D006B40CA /* SearchDetailViewController.swift in Sources */,
 				DBCBA98E2BC0016B006B40CA /* iTunesSearchModel.swift in Sources */,
 				DBCBA95C2BBFEDB1006B40CA /* ViewController.swift in Sources */,
 				DBCBA9A52BC2645C006B40CA /* Protocol.swift in Sources */,
