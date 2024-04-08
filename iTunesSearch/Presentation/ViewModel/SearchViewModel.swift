@@ -8,8 +8,9 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import Alamofire
 
-class SearchViewModel : ViewModel {
+final class SearchViewModel : ViewModel {
     
     let disposeBag = DisposeBag()
     
@@ -32,24 +33,26 @@ class SearchViewModel : ViewModel {
         input.searchButtonTap
             .throttle(.seconds(1), scheduler: MainScheduler.instance)
             .withLatestFrom(input.searchText)
-            .map { return String($0) }
-            .flatMap {
+            .map { String($0)}
+            .flatMapLatest{
                 iTunesSearchManager.shared.fetchiTunesSearchData(router: .search(term: $0), type: iTunesSearchList.self)
             }
+            .debug()
             .subscribe(with: self, onNext: { owner, value in
-                searchResult.onNext(value.results)
-            }, onError: { _, _ in
-                // make Toast by Notification Center
+                switch value{
+                case .success(let success):
+                    searchResult.onNext(success.results)
+                case .failure(let failure):
+                    searchResult.onNext([])
+                }
             })
             .disposed(by: disposeBag)
-                
-        Observable.combineLatest(input.tableViewTap, searchResult)
-            .bind(with: self) { owner, value in
-                let item = value.1[value.0.row]
-                selectedItem.accept(item)
-                
-                print(item)
+
+        input.tableViewTap
+            .withLatestFrom(searchResult) { indexPath, searchResults in
+                return searchResults[indexPath.row]
             }
+            .bind(to: selectedItem)
             .disposed(by: disposeBag)
         
         return Output(search: searchResult, seletedItem:selectedItem)

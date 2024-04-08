@@ -10,8 +10,9 @@ import SnapKit
 import Then
 import RxSwift
 import RxCocoa
+import Toast
 
-class SearchViewController: BaseViewController {
+final class SearchViewController: BaseViewController {
     
     let tableView = UITableView().then {
         $0.register(SearchTableViewCell.self, forCellReuseIdentifier: SearchTableViewCell.identifier)
@@ -25,7 +26,7 @@ class SearchViewController: BaseViewController {
         $0.backgroundImage = UIImage()
     }
     
-    let viewModel = SearchViewModel()
+    private let viewModel = SearchViewModel()
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -34,9 +35,8 @@ class SearchViewController: BaseViewController {
         bind()
     }
     
-    func bind() {
+    private func bind() {
         
-        //        let recentText = PublishSubject<String>()
         let input = SearchViewModel.Input(searchButtonTap: searchBar.rx.searchButtonClicked,
                                           searchText: searchBar.rx.text.orEmpty,
                                           tableViewTap: tableView.rx.itemSelected
@@ -48,8 +48,14 @@ class SearchViewController: BaseViewController {
             .bind(
                 to: tableView.rx.items(
                     cellIdentifier: SearchTableViewCell.identifier,
-                    cellType: SearchTableViewCell.self)) { (row, element, cell) in
-                        cell.updateUI(data: element)
+                    cellType: SearchTableViewCell.self)) { [weak self] (row, element, cell) in
+                        
+                        guard let self = self else { return }
+                        if element.description.isEmpty {
+                            self.view.makeToast("검색결과가 없습니다", duration: 2, position: .center)
+                        } else {
+                            cell.updateUI(data: element)
+                        }
                     }
                     .disposed(by: disposeBag)
         
@@ -57,6 +63,8 @@ class SearchViewController: BaseViewController {
             .withUnretained(self)
             .bind(onNext: { owner, value in
                 let vc = SearchDetailViewController()
+                vc.viewModel.item = value
+                vc.updateUI(data: value)
                 owner.navigationController?.pushViewController(vc, animated: true)
             })
             .disposed(by: disposeBag)
