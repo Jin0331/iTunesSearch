@@ -37,7 +37,7 @@ enum iTunesSearchAPIRouter : URLRequestConvertible {
             return [
                 "term" : term,
                 "country" : "KR",
-                "media" : "software",
+                "entity" : "software",
                 "limit" : 50
             ]
         }
