@@ -52,24 +52,22 @@ final class SearchViewController: BaseViewController {
                         
                         guard let self = self else { return }
                         if element.description.isEmpty {
-                            print("????")
                             self.view.makeToast("검색결과가 없습니다", duration: 2, position: .center)
                         } else {
-                            print(element.description)
                             cell.updateUI(data: element)
                         }
                     }
                     .disposed(by: disposeBag)
         
-//        output.seletedItem
-//            .withUnretained(self)
-//            .bind(onNext: { owner, value in
-//                let vc = SearchDetailViewController()
-//                vc.viewModel.item = value
-//                vc.updateUI(data: value)
-//                owner.navigationController?.pushViewController(vc, animated: true)
-//            })
-//            .disposed(by: disposeBag)
+        output.seletedItem
+            .withUnretained(self)
+            .bind(onNext: { owner, value in
+                let vc = SearchDetailViewController()
+                vc.viewModel.item = value
+                vc.updateUI(data: value)
+                owner.navigationController?.pushViewController(vc, animated: true)
+            })
+            .disposed(by: disposeBag)
     }
     
     override func configureHierarchy() {

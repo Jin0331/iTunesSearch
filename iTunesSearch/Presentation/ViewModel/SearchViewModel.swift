@@ -21,20 +21,20 @@ final class SearchViewModel : ViewModel {
     }
     
     struct Output {
-        let search : BehaviorSubject<[iTunesSearch]>
+        let search : PublishSubject<[iTunesSearch]>
         let seletedItem : PublishRelay<iTunesSearch>
     }
     
     func transform(input: Input) -> Output {
         
-        let searchResult = BehaviorSubject<[iTunesSearch]>(value : [])
+        let searchResult = PublishSubject<[iTunesSearch]>()
         let selectedItem = PublishRelay<iTunesSearch>()
         
         input.searchButtonTap
             .throttle(.seconds(1), scheduler: MainScheduler.instance)
             .withLatestFrom(input.searchText)
             .map { String($0)}
-            .flatMap {
+            .flatMapLatest{
                 iTunesSearchManager.shared.fetchiTunesSearchData(router: .search(term: $0), type: iTunesSearchList.self)
             }
             .debug()
@@ -47,13 +47,13 @@ final class SearchViewModel : ViewModel {
                 }
             })
             .disposed(by: disposeBag)
-        
-        //        Observable.combineLatest(input.tableViewTap, searchResult)
-        //            .bind(with: self) { owner, value in
-        //                let item = value.1[value.0.row]
-        //                selectedItem.accept(item)
-        //            }
-        //            .disposed(by: disposeBag)
+
+        input.tableViewTap
+            .withLatestFrom(searchResult) { indexPath, searchResults in
+                return searchResults[indexPath.row]
+            }
+            .bind(to: selectedItem)
+            .disposed(by: disposeBag)
         
         return Output(search: searchResult, seletedItem:selectedItem)
     }
