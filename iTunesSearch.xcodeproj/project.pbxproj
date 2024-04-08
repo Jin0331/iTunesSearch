@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DBCBA9582BBFEDB1006B40CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9572BBFEDB1006B40CA /* AppDelegate.swift */; };
 		DBCBA95A2BBFEDB1006B40CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9592BBFEDB1006B40CA /* SceneDelegate.swift */; };
-		DBCBA95C2BBFEDB1006B40CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA95B2BBFEDB1006B40CA /* ViewController.swift */; };
 		DBCBA9612BBFEDB2006B40CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBCBA9602BBFEDB2006B40CA /* Assets.xcassets */; };
 		DBCBA9642BBFEDB2006B40CA /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DBCBA9632BBFEDB2006B40CA /* Base */; };
 		DBCBA9752BBFEE4B006B40CA /* iTunesSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9742BBFEE4B006B40CA /* iTunesSearchRouter.swift */; };
@@ -35,13 +34,13 @@
 		DBCBA9AA2BC2899D006B40CA /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9A92BC2899D006B40CA /* SearchDetailViewController.swift */; };
 		DBCBA9AC2BC29ECD006B40CA /* SearchDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9AB2BC29ECD006B40CA /* SearchDetailCollectionViewCell.swift */; };
 		DBCBA9AE2BC2A281006B40CA /* SearchDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9AD2BC2A281006B40CA /* SearchDetailViewModel.swift */; };
+		DBCBA9BF2BC43492006B40CA /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = DBCBA9BE2BC43492006B40CA /* Toast */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DBCBA9542BBFEDB1006B40CA /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCBA9572BBFEDB1006B40CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBCBA9592BBFEDB1006B40CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DBCBA95B2BBFEDB1006B40CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DBCBA9602BBFEDB2006B40CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBCBA9632BBFEDB2006B40CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBCBA9652BBFEDB2006B40CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 				DBCBA9872BBFEF42006B40CA /* RxSwift in Frameworks */,
 				DBCBA98A2BBFF176006B40CA /* Alamofire in Frameworks */,
 				DBCBA9822BBFEF2D006B40CA /* RealmSwift in Frameworks */,
+				DBCBA9BF2BC43492006B40CA /* Toast in Frameworks */,
 				DBCBA9802BBFEF2D006B40CA /* Realm in Frameworks */,
 				DBCBA9A82BC27549006B40CA /* Kingfisher in Frameworks */,
 				DBCBA9852BBFEF42006B40CA /* RxCocoa in Frameworks */,
@@ -105,7 +105,6 @@
 				DBCBA96E2BBFEDFC006B40CA /* Utility */,
 				DBCBA9572BBFEDB1006B40CA /* AppDelegate.swift */,
 				DBCBA9592BBFEDB1006B40CA /* SceneDelegate.swift */,
-				DBCBA95B2BBFEDB1006B40CA /* ViewController.swift */,
 				DBCBA9602BBFEDB2006B40CA /* Assets.xcassets */,
 				DBCBA9622BBFEDB2006B40CA /* LaunchScreen.storyboard */,
 				DBCBA9652BBFEDB2006B40CA /* Info.plist */,
@@ -230,6 +229,7 @@
 				DBCBA9862BBFEF42006B40CA /* RxSwift */,
 				DBCBA9892BBFF176006B40CA /* Alamofire */,
 				DBCBA9A72BC27549006B40CA /* Kingfisher */,
+				DBCBA9BE2BC43492006B40CA /* Toast */,
 			);
 			productName = iTunesSearch;
 			productReference = DBCBA9542BBFEDB1006B40CA /* iTunesSearch.app */;
@@ -266,6 +266,7 @@
 				DBCBA9832BBFEF42006B40CA /* XCRemoteSwiftPackageReference "RxSwift" */,
 				DBCBA9882BBFF176006B40CA /* XCRemoteSwiftPackageReference "Alamofire" */,
 				DBCBA9A62BC27549006B40CA /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				DBCBA9BD2BC43492006B40CA /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			productRefGroup = DBCBA9552BBFEDB1006B40CA /* Products */;
 			projectDirPath = "";
@@ -297,7 +298,6 @@
 				DBCBA9752BBFEE4B006B40CA /* iTunesSearchRouter.swift in Sources */,
 				DBCBA9AA2BC2899D006B40CA /* SearchDetailViewController.swift in Sources */,
 				DBCBA98E2BC0016B006B40CA /* iTunesSearchModel.swift in Sources */,
-				DBCBA95C2BBFEDB1006B40CA /* ViewController.swift in Sources */,
 				DBCBA9A52BC2645C006B40CA /* Protocol.swift in Sources */,
 				DBCBA9952BC25E0C006B40CA /* SearchViewController.swift in Sources */,
 				DBCBA9582BBFEDB1006B40CA /* AppDelegate.swift in Sources */,
@@ -583,6 +583,14 @@
 				minimumVersion = 7.11.0;
 			};
 		};
+		DBCBA9BD2BC43492006B40CA /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -625,6 +633,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DBCBA9A62BC27549006B40CA /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		DBCBA9BE2BC43492006B40CA /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBCBA9BD2BC43492006B40CA /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

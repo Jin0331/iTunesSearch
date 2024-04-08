@@ -16,26 +16,20 @@ final class iTunesSearchManager {
     
     private init () { }
     
-    func fetchiTunesSearchData<T:Decodable>(router : iTunesSearchAPIRouter, type : T.Type) -> Observable<T> {
+    func fetchiTunesSearchData<T:Decodable>(router : iTunesSearchAPIRouter, type : T.Type) -> Single<Result<T, AFError>> {
         
-        return Observable<T>.create { observer in
+        return Single<Result<T, AFError>>.create { single in
             switch router {
             case .search:
                 AF.request(router)
                     .responseDecodable(of: type) { response in
                         switch response.result {
                         case .success(let success):
-                            observer.onNext(success)
+                            single(.success(.success(success)))
                         case .failure(let error):
                             switch error {
-                            case .invalidURL:
-                                observer.onError(error)
-                            case .parameterEncodingFailed:
-                                observer.onError(error)
-                            case .urlRequestValidationFailed:
-                                observer.onError(error)
                             default :
-                                observer.onError(error)
+                                single(.success(.success(error as! T)))
                             }
                         }
                     }
