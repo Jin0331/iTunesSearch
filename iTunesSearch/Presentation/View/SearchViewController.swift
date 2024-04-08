@@ -11,7 +11,7 @@ import Then
 import RxSwift
 import RxCocoa
 
-class SearchViewController: BaseViewController {
+final class SearchViewController: BaseViewController {
     
     let tableView = UITableView().then {
         $0.register(SearchTableViewCell.self, forCellReuseIdentifier: SearchTableViewCell.identifier)
@@ -25,7 +25,7 @@ class SearchViewController: BaseViewController {
         $0.backgroundImage = UIImage()
     }
     
-    let viewModel = SearchViewModel()
+    private let viewModel = SearchViewModel()
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -34,9 +34,8 @@ class SearchViewController: BaseViewController {
         bind()
     }
     
-    func bind() {
+    private func bind() {
         
-        //        let recentText = PublishSubject<String>()
         let input = SearchViewModel.Input(searchButtonTap: searchBar.rx.searchButtonClicked,
                                           searchText: searchBar.rx.text.orEmpty,
                                           tableViewTap: tableView.rx.itemSelected
@@ -57,6 +56,8 @@ class SearchViewController: BaseViewController {
             .withUnretained(self)
             .bind(onNext: { owner, value in
                 let vc = SearchDetailViewController()
+                vc.viewModel.item = value
+                vc.updateUI(data: value)
                 owner.navigationController?.pushViewController(vc, animated: true)
             })
             .disposed(by: disposeBag)

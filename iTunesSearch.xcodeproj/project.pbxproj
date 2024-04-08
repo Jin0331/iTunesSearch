@@ -33,6 +33,8 @@
 		DBCBA9A52BC2645C006B40CA /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9A42BC2645C006B40CA /* Protocol.swift */; };
 		DBCBA9A82BC27549006B40CA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DBCBA9A72BC27549006B40CA /* Kingfisher */; };
 		DBCBA9AA2BC2899D006B40CA /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9A92BC2899D006B40CA /* SearchDetailViewController.swift */; };
+		DBCBA9AC2BC29ECD006B40CA /* SearchDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9AB2BC29ECD006B40CA /* SearchDetailCollectionViewCell.swift */; };
+		DBCBA9AE2BC2A281006B40CA /* SearchDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA9AD2BC2A281006B40CA /* SearchDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		DBCBA9A22BC26432006B40CA /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		DBCBA9A42BC2645C006B40CA /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		DBCBA9A92BC2899D006B40CA /* SearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
+		DBCBA9AB2BC29ECD006B40CA /* SearchDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		DBCBA9AD2BC2A281006B40CA /* SearchDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				DBCBA9A22BC26432006B40CA /* SearchViewModel.swift */,
+				DBCBA9AD2BC2A281006B40CA /* SearchDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 			children = (
 				DBCBA99F2BC26368006B40CA /* SearchTableViewCell.swift */,
 				DBCBA99D2BC26347006B40CA /* MovieCollectionViewCell.swift */,
+				DBCBA9AB2BC29ECD006B40CA /* SearchDetailCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -297,12 +303,14 @@
 				DBCBA9582BBFEDB1006B40CA /* AppDelegate.swift in Sources */,
 				DBCBA9A32BC26432006B40CA /* SearchViewModel.swift in Sources */,
 				DBCBA99C2BC25E90006B40CA /* BaseViewController.swift in Sources */,
+				DBCBA9AE2BC2A281006B40CA /* SearchDetailViewModel.swift in Sources */,
 				DBCBA9932BC02079006B40CA /* RealmModel.swift in Sources */,
 				DBCBA9912BC00D09006B40CA /* Formatter+Extension.swift in Sources */,
 				DBCBA99E2BC26347006B40CA /* MovieCollectionViewCell.swift in Sources */,
 				DBCBA9A02BC26368006B40CA /* SearchTableViewCell.swift in Sources */,
 				DBCBA95A2BBFEDB1006B40CA /* SceneDelegate.swift in Sources */,
 				DBCBA98C2BC000A0006B40CA /* iTunesSearchManager.swift in Sources */,
+				DBCBA9AC2BC29ECD006B40CA /* SearchDetailCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

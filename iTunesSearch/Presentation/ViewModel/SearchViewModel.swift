@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class SearchViewModel : ViewModel {
+final class SearchViewModel : ViewModel {
     
     let disposeBag = DisposeBag()
     
@@ -47,8 +47,6 @@ class SearchViewModel : ViewModel {
             .bind(with: self) { owner, value in
                 let item = value.1[value.0.row]
                 selectedItem.accept(item)
-                
-                print(item)
             }
             .disposed(by: disposeBag)
         
